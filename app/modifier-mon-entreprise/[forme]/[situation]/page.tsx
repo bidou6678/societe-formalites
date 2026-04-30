@@ -71,15 +71,15 @@ export default async function OffresPage({
         {/* Barre de progression — étape 3 */}
         <ProcessStepper currentStep={3} forme={formeData.slug} situation={situation} />
 
-        {/* Cartes d'offres — centrées et légèrement plus étroites */}
-        <section className="py-[48px] px-[120px]">
-          <div className="flex gap-6 max-w-[880px] mx-auto">
+        {/* Cartes d'offres */}
+        <section className="py-10 lg:py-[48px] px-4 sm:px-8 lg:px-[120px]">
+          <div className="flex flex-col sm:flex-row sm:items-stretch gap-6 max-w-[880px] mx-auto">
             {offres.map((offre) => (
               <Link
                 key={offre.id}
                 href={`/modifier-mon-entreprise/${formeData.slug}/${situation}/${offre.id}`}
                 className={[
-                  "group flex-1 flex flex-col",
+                  "group relative flex-1 flex flex-col",
                   "bg-white rounded-[20px] p-7",
                   "shadow-[inset_0_0_0_1px_#E9E9E9]",
                   "hover:bg-[#E1F3FF] hover:shadow-[inset_0_0_0_2px_#005EFF]",
@@ -114,7 +114,7 @@ export default async function OffresPage({
                 <div className="h-px bg-[#E9E9E9] mb-5" />
 
                 {/* Prestations */}
-                <ul className="flex flex-col gap-[10px] flex-1">
+                <ul className="flex flex-col gap-[10px]">
                   {offre.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <span
@@ -128,17 +128,12 @@ export default async function OffresPage({
                   ))}
                 </ul>
 
-                {/* Flèche seule au hover */}
-                <div className="flex justify-end mt-6 pt-4 border-t border-[#E9E9E9] group-hover:border-[#C5D8FF] transition-colors duration-200">
-                  <div className="w-0 overflow-hidden group-hover:w-9 shrink-0 transition-[width] duration-200">
-                    <div className="w-9 h-9 bg-[#005EFF] rounded-lg flex items-center justify-center">
-                      <span
-                        className="material-symbols-outlined text-white"
-                        style={{ fontSize: "18px" }}
-                      >
-                        arrow_forward
-                      </span>
-                    </div>
+                {/* Flèche bas droite au hover */}
+                <div className="absolute bottom-7 right-7 w-0 overflow-hidden group-hover:w-8 transition-[width] duration-200">
+                  <div className="w-8 h-8 bg-[#005EFF] rounded-lg flex items-center justify-center">
+                    <span className="material-symbols-outlined text-white" style={{ fontSize: "16px" }}>
+                      arrow_forward
+                    </span>
                   </div>
                 </div>
               </Link>

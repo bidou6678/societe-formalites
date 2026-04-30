@@ -30,7 +30,7 @@ export default function SelectionForm({ title, options, cta }: SelectionFormProp
       </h2>
 
       {/* Grille 2 colonnes — multi-select */}
-      <div className="grid grid-cols-2 gap-3 mb-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-7">
         {options.map((opt) => {
           const isOn = selected.has(opt);
           return (

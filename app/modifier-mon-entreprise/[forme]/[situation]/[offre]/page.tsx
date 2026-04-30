@@ -94,9 +94,9 @@ export default async function OffreDetailPage({
         <ProcessStepper currentStep={4} forme={formeData.slug} situation={situation} />
 
         {/* Layout deux colonnes */}
-        <div className="px-[120px] py-10 flex gap-10 items-start">
+        <div className="px-4 sm:px-8 lg:px-[120px] py-10 flex flex-col lg:flex-row gap-10 items-start">
           {/* Colonne gauche — titre + sous-titre + bénéfices */}
-          <div className="flex flex-col gap-8 w-[380px] shrink-0 sticky top-8">
+          <div className="flex flex-col gap-8 w-full lg:w-[380px] lg:shrink-0 lg:sticky lg:top-8">
             <div className="flex flex-col gap-4">
               <h1
                 className="text-[#000E47] font-bold"

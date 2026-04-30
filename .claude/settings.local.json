@@ -7,7 +7,8 @@
       "Bash(sips -g pixelWidth -g pixelHeight /Users/societe/societe-formalites/public/logos/logo-societe.png)",
       "mcp__Claude_in_Chrome__tabs_context_mcp",
       "WebFetch(domain:services.pappers.fr)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(identify /Users/societe/societe-formalites/public/logos/logo-societe.png)"
     ]
   }
 }

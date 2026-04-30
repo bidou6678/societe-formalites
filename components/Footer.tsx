@@ -34,11 +34,11 @@ export default function Footer() {
   return (
     <footer>
       {/* Footer principal — bleu foncé #0C1E5D */}
-      <div className="bg-[#0C1E5D] px-[100px] py-5 flex flex-col gap-5">
+      <div className="bg-[#0C1E5D] px-4 sm:px-8 lg:px-[100px] py-8 lg:py-5 flex flex-col gap-5">
         {/* Contenu : logo + colonnes de liens */}
-        <div className="flex gap-[90px] items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
           {/* Logo + description */}
-          <div className="shrink-0 w-[192px] flex flex-col items-center gap-5">
+          <div className="shrink-0 lg:w-[192px] flex flex-col items-center gap-5">
             {/* Logo blanc */}
             <div className="relative shrink-0" style={{ width: "134px", height: "53.21px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           {/* Colonnes de liens */}
-          <div className="flex flex-1 gap-20">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-1 gap-8 lg:gap-20 w-full lg:w-auto">
             {footerLinks.map((col) => (
               <div key={col.title} className="flex flex-col gap-5 flex-1">
                 <p
@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="h-px bg-[#BABFD6] opacity-30" />
 
         {/* Ligne du bas : réseaux sociaux */}
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-start lg:justify-end">
           <div className="flex items-center gap-4">
             <span
               className="text-white uppercase tracking-widest font-normal"
@@ -120,10 +120,7 @@ export default function Footer() {
       </div>
 
       {/* Barre copyright — #000E47 */}
-      <div
-        className="bg-[#000E47] px-[100px] flex items-center justify-between"
-        style={{ height: "40px" }}
-      >
+      <div className="bg-[#000E47] px-4 sm:px-8 lg:px-[100px] py-3 lg:py-0 lg:h-[40px] flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-[10px]">
           {legalLinks.map((link, i) => (
             <span key={link.label} className="flex items-center gap-[10px]">

@@ -49,7 +49,7 @@ export default async function SituationPage({
         <ProcessStepper currentStep={2} forme={formeData.slug} />
 
         {/* Titre */}
-        <section className="px-[120px] pt-10 pb-12">
+        <section className="px-4 sm:px-8 lg:px-[120px] pt-10 pb-12">
           <h1
             className="text-[#000E47] font-bold mb-2"
             style={{ fontSize: "28px", lineHeight: "36px" }}
@@ -62,8 +62,8 @@ export default async function SituationPage({
         </section>
 
         {/* Cartes de choix */}
-        <section className="px-[120px] pb-[80px]">
-          <div className="flex gap-6">
+        <section className="px-4 sm:px-8 lg:px-[120px] pb-10 lg:pb-[80px]">
+          <div className="flex flex-col sm:flex-row gap-6">
             {situations.map((sit) => (
               <Link
                 key={sit.slug}

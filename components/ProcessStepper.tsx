@@ -22,10 +22,7 @@ function stepHref(stepNum: number, forme?: string, situation?: string): string |
 
 export default function ProcessStepper({ currentStep, forme, situation }: ProcessStepperProps) {
   return (
-    <div className="bg-white border-b border-[#E9E9E9] px-[120px] py-5">
-      <p className="text-[#000E47] font-bold mb-3" style={{ fontSize: "22px" }}>
-        Gestion d&apos;entreprise
-      </p>
+    <div className="bg-white border-b border-[#E9E9E9] px-4 sm:px-8 lg:px-[120px] py-5">
       <div className="flex items-center gap-2 flex-wrap">
         {STEPS.map((step, i) => {
           const num = i + 1;
