@@ -8,7 +8,8 @@
       "mcp__Claude_in_Chrome__tabs_context_mcp",
       "WebFetch(domain:services.pappers.fr)",
       "WebSearch",
-      "Bash(identify /Users/societe/societe-formalites/public/logos/logo-societe.png)"
+      "Bash(identify /Users/societe/societe-formalites/public/logos/logo-societe.png)",
+      "WebFetch(domain:www.societe.com)"
     ]
   }
 }

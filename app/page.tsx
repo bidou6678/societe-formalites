@@ -7,7 +7,7 @@ const features = [
     icon: "rocket_launch",
     title: "Créer mon entreprise",
     description: "La création d'entreprise simple et rapide",
-    href: "https://www.legalplace.fr/creation/creation-entreprise-2",
+    href: "/creer-mon-entreprise",
   },
   {
     icon: "change_circle",

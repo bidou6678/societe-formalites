@@ -4,37 +4,30 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="bg-white h-[76px] flex items-center shrink-0 w-full">
+    <header className="bg-white h-[76px] flex items-center shrink-0 w-full relative z-10" style={{ boxShadow: "0 2px 4px rgba(0,0,0,.12)" }}>
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center gap-4 lg:gap-8 h-full">
-        {/* Logo — SVG couleur unique, viewBox 123×43 */}
-        <Link href="/" className="shrink-0 flex items-center">
+
+        {/* Logo */}
+        <a href="https://www.societe.com/" className="shrink-0 flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logos/logo-color.svg" alt="Société.com" style={{ height: "38px", width: "111px" }} />
-        </Link>
+        </a>
 
         {/* Navigation — masquée sur mobile */}
-        <nav className="hidden lg:flex items-center shrink-0">
-          <Link
-            href="/solutions"
-            className="flex items-center gap-2 h-[76px] px-5 text-[#000E47] text-base font-medium hover:text-[#1E2F73] transition-colors whitespace-nowrap"
-          >
-            Solutions
-            <span className="material-symbols-outlined" style={{ fontSize: "18px" }}>
-              expand_more
-            </span>
-          </Link>
-          <Link
-            href="/services"
-            className="flex items-center h-[76px] px-5 text-[#000E47] text-base font-medium hover:text-[#1E2F73] transition-colors whitespace-nowrap"
-          >
-            Services
-          </Link>
-          <Link
-            href="/offres"
-            className="flex items-center h-[76px] px-5 text-[#000E47] text-base font-medium hover:text-[#1E2F73] transition-colors whitespace-nowrap"
-          >
-            Offres
-          </Link>
+        <nav className="hidden lg:flex items-center shrink-0 h-full">
+          {[
+            { label: "Solutions", href: "https://www.societe.com/solutions" },
+            { label: "Services", href: "/" },
+            { label: "Offres", href: "https://www.societe.com/offres.html" },
+          ].map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="flex items-center gap-1.5 h-full px-5 text-[#000E47] text-base font-medium whitespace-nowrap transition-colors hover:text-[#005EFF] hover:bg-[#F2F9FD] cursor-pointer"
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
 
         {/* Barre de recherche — masquée sur mobile */}
