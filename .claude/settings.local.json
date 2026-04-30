@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(identify ~/Downloads/Logo-societe_2022.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight ~/Downloads/Logo-societe_2022.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/societe/societe-formalites/public/logos/logo-societe.png)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "WebFetch(domain:services.pappers.fr)",
+      "WebSearch"
+    ]
+  }
+}
