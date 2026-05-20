@@ -1,13 +1,24 @@
-import { notFound } from "next/navigation";
-import Link from "next/link";
+import { useParams, Navigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProcessStepper from "@/components/ProcessStepper";
 import { formesJuridiques } from "@/lib/formes-juridiques";
 
-const SITUATION_LABELS: Record<string, string> = {
+const SITUATION_LABELS = {
   moi: "Pour moi même",
   client: "Pour le compte d'un client",
+};
+
+// URLs de sortie selon l'offre et la situation
+const OFFRE_URLS = {
+  modifications: {
+    moi: "https://societe-com.legalplace.fr/contrats/s-com-modifications/creer",
+    client: "https://societe-com.legalplace.fr/contrats/s-com-mand-modifications/creer",
+  },
+  dissolution: {
+    moi: "https://societe-com.legalplace.fr/contrats/s-com-dissolution/creer/",
+    client: "https://societe-com.legalplace.fr/contrats/s-com-mand-dissolution/creer",
+  },
 };
 
 const offres = [
@@ -44,40 +55,31 @@ const offres = [
   },
 ];
 
-export async function generateStaticParams() {
-  return formesJuridiques.flatMap((f) =>
-    ["moi", "client"].map((sit) => ({ forme: f.slug, situation: sit }))
-  );
-}
-
-export default async function OffresPage({
-  params,
-}: {
-  params: Promise<{ forme: string; situation: string }>;
-}) {
-  const { forme, situation } = await params;
+export default function ModifierOffresPage() {
+  const { forme, situation } = useParams();
 
   const formeData = formesJuridiques.find(
     (f) => f.slug.toLowerCase() === forme.toLowerCase()
   );
 
-  if (!formeData || !SITUATION_LABELS[situation]) notFound();
+  if (!formeData || !SITUATION_LABELS[situation]) {
+    return <Navigate to="/modifier-mon-entreprise" replace />;
+  }
 
   return (
     <>
       <Header />
 
       <main className="flex-1 bg-[#F2F9FD]">
-        {/* Barre de progression — étape 3 */}
         <ProcessStepper currentStep={3} forme={formeData.slug} situation={situation} />
 
-        {/* Cartes d'offres */}
         <section className="py-10 lg:py-[48px] px-4 sm:px-8 lg:px-[120px]">
           <div className="flex flex-col sm:flex-row sm:items-stretch gap-6 max-w-[880px] mx-auto">
             {offres.map((offre) => (
-              <Link
+              <a
                 key={offre.id}
-                href={`/modifier-mon-entreprise/${formeData.slug}/${situation}/${offre.id}`}
+                href={OFFRE_URLS[offre.id]?.[situation] ?? "#"}
+                rel="noopener noreferrer"
                 className={[
                   "group relative flex-1 flex flex-col",
                   "bg-white rounded-[20px] p-7",
@@ -86,7 +88,6 @@ export default async function OffresPage({
                   "transition-all duration-200",
                 ].join(" ")}
               >
-                {/* Titre */}
                 <h2
                   className="text-[#000E47] font-semibold mb-4"
                   style={{ fontSize: "16px", lineHeight: "22px" }}
@@ -94,7 +95,6 @@ export default async function OffresPage({
                   {offre.title}
                 </h2>
 
-                {/* Prix */}
                 <div className="flex items-center gap-2 mb-5">
                   <span
                     className="text-[#005EFF] font-bold"
@@ -110,10 +110,8 @@ export default async function OffresPage({
                   </span>
                 </div>
 
-                {/* Séparateur */}
                 <div className="h-px bg-[#E9E9E9] mb-5" />
 
-                {/* Prestations */}
                 <ul className="flex flex-col gap-[10px]">
                   {offre.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
@@ -128,7 +126,6 @@ export default async function OffresPage({
                   ))}
                 </ul>
 
-                {/* Flèche bas droite au hover */}
                 <div className="absolute bottom-7 right-7 w-0 overflow-hidden group-hover:w-8 transition-[width] duration-200">
                   <div className="w-8 h-8 bg-[#005EFF] rounded-lg flex items-center justify-center">
                     <span className="material-symbols-outlined text-white" style={{ fontSize: "16px" }}>
@@ -136,7 +133,7 @@ export default async function OffresPage({
                     </span>
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </section>

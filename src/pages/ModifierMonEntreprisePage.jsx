@@ -4,17 +4,19 @@ import LegalFormCard from "@/components/LegalFormCard";
 import ProcessStepper from "@/components/ProcessStepper";
 import { formesJuridiques } from "@/lib/formes-juridiques";
 
+// Mêmes formes que la page Créer (hors EI/Micro qui n'ont pas d'URLs de modification)
+const FORMES_MODIFIER = ["SAS", "SARL", "SASU", "EURL", "SCI"];
+
 export default function ModifierMonEntreprisePage() {
+  const formes = formesJuridiques.filter((f) => FORMES_MODIFIER.includes(f.acronym));
 
   return (
     <>
       <Header />
 
       <main className="flex-1 bg-[#F2F9FD]">
-        {/* Barre de progression */}
         <ProcessStepper currentStep={1} />
 
-        {/* Titre de section */}
         <section className="py-10 lg:py-[64px]">
           <h1
             className="text-[#000E47] font-bold text-center mb-2 px-4"
@@ -30,7 +32,7 @@ export default function ModifierMonEntreprisePage() {
           </p>
 
           <div className="px-4 sm:px-8 lg:px-[120px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {formesJuridiques.map((f) => (
+            {formes.map((f) => (
               <LegalFormCard
                 key={f.slug}
                 acronym={f.acronym}

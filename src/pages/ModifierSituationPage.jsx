@@ -1,11 +1,9 @@
-import { notFound } from "next/navigation";
-import Link from "next/link";
+import { useParams, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProcessStepper from "@/components/ProcessStepper";
 import { formesJuridiques } from "@/lib/formes-juridiques";
-
-const FORMES_CREATION = ["SAS", "SASU", "SARL", "EURL", "SCI"];
 
 const situations = [
   {
@@ -13,7 +11,7 @@ const situations = [
     icon: "person",
     title: "Pour moi même",
     description:
-      "Vous êtes le futur dirigeant et souhaitez créer votre propre entreprise.",
+      "Vous êtes dirigeant ou associé et souhaitez effectuer une formalité pour votre propre entreprise.",
     tag: "Particulier",
   },
   {
@@ -26,23 +24,16 @@ const situations = [
   },
 ];
 
-export async function generateStaticParams() {
-  return formesJuridiques
-    .filter((f) => FORMES_CREATION.includes(f.acronym))
-    .map((f) => ({ forme: f.slug }));
-}
+export default function ModifierSituationPage() {
+  const { forme } = useParams();
 
-export default async function CreerSituationPage({
-  params,
-}: {
-  params: Promise<{ forme: string }>;
-}) {
-  const { forme } = await params;
   const formeData = formesJuridiques.find(
     (f) => f.slug.toLowerCase() === forme.toLowerCase()
   );
 
-  if (!formeData || !FORMES_CREATION.includes(formeData.acronym)) notFound();
+  if (!formeData) {
+    return <Navigate to="/modifier-mon-entreprise" replace />;
+  }
 
   return (
     <>
@@ -68,7 +59,7 @@ export default async function CreerSituationPage({
             {situations.map((sit) => (
               <Link
                 key={sit.slug}
-                href={`/modifier-mon-entreprise/${formeData.slug}/${sit.slug}`}
+                to={`/modifier-mon-entreprise/${formeData.slug}/${sit.slug}`}
                 className={[
                   "group relative flex-1 flex flex-col gap-6 p-8",
                   "bg-white rounded-[20px]",

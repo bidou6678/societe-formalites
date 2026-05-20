@@ -1,82 +1,68 @@
-import Link from "next/link";
-
 const footerLinks = [
   {
     title: "Offres et services",
     links: [
-      { label: "Offres", href: "/offres" },
-      { label: "Fichiers", href: "/fichiers" },
-      { label: "Annuaire", href: "/annuaire" },
-      { label: "API", href: "/api" },
+      { label: "Offres", href: "https://www.societe.com/offres.html" },
+      { label: "Fichiers", href: "https://www.societe.com/fichiers" },
+      { label: "Annuaire", href: "https://www.societe.com/annuaire" },
+      { label: "API", href: "https://www.societe.com/api" },
     ],
   },
   {
     title: "Aide et contact",
     links: [
-      { label: "Contact Societe.com", href: "/contact" },
-      { label: "FAQ", href: "/faq" },
+      { label: "Contact Societe.com", href: "https://www.societe.com/contact" },
+      { label: "FAQ", href: "https://www.societe.com/faq" },
     ],
   },
   {
     title: "Actualité",
-    links: [{ label: "Blog Societe", href: "/blog" }],
+    links: [{ label: "Blog Societe", href: "https://www.societe.com/blog" }],
   },
 ];
 
 const legalLinks = [
-  { label: "CGU & CGV", href: "/cgu" },
-  { label: "Gestion des cookies", href: "/cookies" },
-  { label: "Politique de confidentialité", href: "/confidentialite" },
-  { label: "Mentions Légales", href: "/mentions-legales" },
+  { label: "CGU & CGV", href: "https://www.societe.com/cgu" },
+  { label: "Gestion des cookies", href: "https://www.societe.com/cookies" },
+  { label: "Politique de confidentialité", href: "https://www.societe.com/confidentialite" },
+  { label: "Mentions Légales", href: "https://www.societe.com/mentions-legales" },
 ];
 
 export default function Footer() {
   return (
     <footer>
-      {/* Footer principal — bleu foncé #0C1E5D */}
       <div className="bg-[#0C1E5D] px-4 sm:px-8 lg:px-[100px] py-8 lg:py-5 flex flex-col gap-5">
-        {/* Contenu : logo + colonnes de liens */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          {/* Logo + description */}
+
           <div className="shrink-0 lg:w-[192px] flex flex-col items-center gap-5">
-            {/* Logo blanc */}
             <div className="relative shrink-0" style={{ width: "134px", height: "53.21px" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/logos/logo-white.svg"
                 alt="Société.com"
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
               />
             </div>
-            <p
-              className="text-[#BABFD6] text-center"
-              style={{ fontSize: "14px", lineHeight: "18px" }}
-            >
-              Nous rendons accessible les informations sur les entreprises et
-              leurs dirigeants
+            <p className="text-[#BABFD6] text-center" style={{ fontSize: "14px", lineHeight: "18px" }}>
+              Nous rendons accessible les informations sur les entreprises et leurs dirigeants
             </p>
           </div>
 
-          {/* Colonnes de liens */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-1 gap-8 lg:gap-20 w-full lg:w-auto">
             {footerLinks.map((col) => (
               <div key={col.title} className="flex flex-col gap-5 flex-1">
-                <p
-                  className="text-white font-semibold"
-                  style={{ fontSize: "14px", lineHeight: "16px" }}
-                >
+                <p className="text-white font-semibold" style={{ fontSize: "14px", lineHeight: "16px" }}>
                   {col.title}
                 </p>
                 <ul className="flex flex-col gap-4">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <Link
+                      <a
                         href={link.href}
                         className="text-[#BABFD6] hover:text-white transition-colors"
                         style={{ fontSize: "14px", lineHeight: "16px" }}
                       >
                         {link.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -85,64 +71,35 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Séparateur */}
         <div className="h-px bg-[#BABFD6] opacity-30" />
 
-        {/* Ligne du bas : réseaux sociaux */}
         <div className="flex items-center justify-start lg:justify-end">
           <div className="flex items-center gap-4">
-            <span
-              className="text-white uppercase tracking-widest font-normal"
-              style={{ fontSize: "12px", lineHeight: "14px" }}
-            >
+            <span className="text-white uppercase tracking-widest font-normal" style={{ fontSize: "12px", lineHeight: "14px" }}>
               Suivez-nous
             </span>
-            <a
-              href="https://www.linkedin.com/company/societe-com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="text-white hover:text-[#BABFD6] transition-colors"
-            >
+            <a href="https://www.linkedin.com/company/societe-com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white hover:text-[#BABFD6] transition-colors">
               <LinkedInIcon />
             </a>
-            <a
-              href="https://twitter.com/societedotcom"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X (Twitter)"
-              className="text-white hover:text-[#BABFD6] transition-colors"
-            >
+            <a href="https://twitter.com/societedotcom" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white hover:text-[#BABFD6] transition-colors">
               <XIcon />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Barre copyright — #000E47 */}
       <div className="bg-[#000E47] px-4 sm:px-8 lg:px-[100px] py-3 lg:py-0 lg:h-[40px] flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-[10px]">
           {legalLinks.map((link, i) => (
             <span key={link.label} className="flex items-center gap-[10px]">
-              {i > 0 && (
-                <span className="text-[#8E95BA]" style={{ fontSize: "12px" }}>
-                  |
-                </span>
-              )}
-              <Link
-                href={link.href}
-                className="text-[#8E95BA] hover:text-white transition-colors"
-                style={{ fontSize: "12px", lineHeight: "16px" }}
-              >
+              {i > 0 && <span className="text-[#8E95BA]" style={{ fontSize: "12px" }}>|</span>}
+              <a href={link.href} className="text-[#8E95BA] hover:text-white transition-colors" style={{ fontSize: "12px", lineHeight: "16px" }}>
                 {link.label}
-              </Link>
+              </a>
             </span>
           ))}
         </div>
-        <p
-          className="text-[#8E95BA] whitespace-nowrap"
-          style={{ fontSize: "12px", lineHeight: "16px" }}
-        >
+        <p className="text-[#8E95BA] whitespace-nowrap" style={{ fontSize: "12px", lineHeight: "16px" }}>
           ©2024 SOCIETE SAS
         </p>
       </div>

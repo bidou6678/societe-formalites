@@ -1,78 +1,61 @@
-export type Modification = {
-  icon: string;
-  title: string;
-  description: string;
-  price: string;
-};
-
-export type FormeJuridique = {
-  acronym: string;
-  fullName: string;
-  description: string;
-  slug: string;
-  intro: string;
-  modifications: Modification[];
-  dissolutions: Modification[];
-};
-
 // ─── Blocs réutilisables ─────────────────────────────────────────────────────
 
-const modSiege: Modification = {
+const modSiege = {
   icon: "location_on",
   title: "Changement de siège social",
   description: "Déplacez le siège social en France ou à l'étranger",
   price: "Dès 79 €",
 };
-const modNom: Modification = {
+const modNom = {
   icon: "edit",
   title: "Changement de dénomination",
   description: "Modifiez le nom commercial de votre société",
   price: "Dès 99 €",
 };
-const modObjet: Modification = {
+const modObjet = {
   icon: "article",
   title: "Changement d'objet social",
   description: "Élargissez ou modifiez l'activité de votre société",
   price: "Dès 99 €",
 };
-const modCapHausse: Modification = {
+const modCapHausse = {
   icon: "trending_up",
   title: "Augmentation de capital",
   description: "Renforcez les fonds propres de votre société",
   price: "Dès 149 €",
 };
-const modCapBaisse: Modification = {
+const modCapBaisse = {
   icon: "trending_down",
   title: "Réduction de capital",
   description: "Réduisez le capital social de votre société",
   price: "Dès 149 €",
 };
-const modTransformation: Modification = {
+const modTransformation = {
   icon: "change_circle",
   title: "Transformation de société",
   description: "Transformez votre société en une autre forme juridique",
   price: "Dès 199 €",
 };
-const modProrogation: Modification = {
+const modProrogation = {
   icon: "schedule",
   title: "Prorogation de durée",
   description: "Prolongez la durée de vie de votre société au-delà des 99 ans",
   price: "Dès 79 €",
 };
-const modEtablissement: Modification = {
+const modEtablissement = {
   icon: "add_business",
   title: "Ouverture d'un établissement",
   description: "Créez un établissement secondaire ou une succursale",
   price: "Dès 89 €",
 };
 
-const dissoAmiable: Modification = {
+const dissoAmiable = {
   icon: "gavel",
   title: "Dissolution-liquidation amiable",
   description: "Fermez définitivement votre société à l'amiable",
   price: "Dès 199 €",
 };
-const dissoSansLiquid: Modification = {
+const dissoSansLiquid = {
   icon: "merge_type",
   title: "Dissolution sans liquidation",
   description: "Dissolution par fusion ou scission de sociétés",
@@ -81,7 +64,7 @@ const dissoSansLiquid: Modification = {
 
 // ─── Formes juridiques ────────────────────────────────────────────────────────
 
-export const formesJuridiques: FormeJuridique[] = [
+export const formesJuridiques = [
   {
     acronym: "SAS",
     fullName: "Société par Actions Simplifiée",
@@ -89,16 +72,10 @@ export const formesJuridiques: FormeJuridique[] = [
     slug: "SAS",
     intro: "Modifiez ou dissolvez votre SAS en toute sérénité. Nos formalistes prennent en charge l'ensemble des démarches auprès du guichet unique.",
     modifications: [
-      modSiege,
-      modNom,
-      modObjet,
+      modSiege, modNom, modObjet,
       { icon: "manage_accounts", title: "Changement de président", description: "Nommez ou révoquez un président ou directeur général", price: "Dès 89 €" },
       { icon: "swap_horiz", title: "Cession d'actions", description: "Transférez des actions entre associés ou vers un tiers", price: "Dès 149 €" },
-      modCapHausse,
-      modCapBaisse,
-      modTransformation,
-      modProrogation,
-      modEtablissement,
+      modCapHausse, modCapBaisse, modTransformation, modProrogation, modEtablissement,
     ],
     dissolutions: [dissoAmiable, dissoSansLiquid],
   },
@@ -109,16 +86,10 @@ export const formesJuridiques: FormeJuridique[] = [
     slug: "SARL",
     intro: "Modifiez ou dissolvez votre SARL en toute sérénité. Nos formalistes prennent en charge l'ensemble des démarches auprès du guichet unique.",
     modifications: [
-      modSiege,
-      modNom,
-      modObjet,
+      modSiege, modNom, modObjet,
       { icon: "manage_accounts", title: "Changement de gérant", description: "Nommez ou révoquez le gérant de votre SARL", price: "Dès 89 €" },
       { icon: "swap_horiz", title: "Cession de parts sociales", description: "Transférez des parts entre associés ou vers un tiers", price: "Dès 149 €" },
-      modCapHausse,
-      modCapBaisse,
-      modTransformation,
-      modProrogation,
-      modEtablissement,
+      modCapHausse, modCapBaisse, modTransformation, modProrogation, modEtablissement,
     ],
     dissolutions: [dissoAmiable, dissoSansLiquid],
   },
@@ -129,15 +100,9 @@ export const formesJuridiques: FormeJuridique[] = [
     slug: "SASU",
     intro: "Modifiez ou dissolvez votre SASU en toute sérénité. Nos formalistes prennent en charge l'ensemble des démarches auprès du guichet unique.",
     modifications: [
-      modSiege,
-      modNom,
-      modObjet,
+      modSiege, modNom, modObjet,
       { icon: "manage_accounts", title: "Changement de président", description: "Nommez ou révoquez le président de votre SASU", price: "Dès 89 €" },
-      modCapHausse,
-      modCapBaisse,
-      modTransformation,
-      modProrogation,
-      modEtablissement,
+      modCapHausse, modCapBaisse, modTransformation, modProrogation, modEtablissement,
     ],
     dissolutions: [dissoAmiable, dissoSansLiquid],
   },
@@ -148,15 +113,9 @@ export const formesJuridiques: FormeJuridique[] = [
     slug: "EURL",
     intro: "Modifiez ou dissolvez votre EURL en toute sérénité. Nos formalistes prennent en charge l'ensemble des démarches auprès du guichet unique.",
     modifications: [
-      modSiege,
-      modNom,
-      modObjet,
+      modSiege, modNom, modObjet,
       { icon: "manage_accounts", title: "Changement de gérant", description: "Nommez ou révoquez le gérant de votre EURL", price: "Dès 89 €" },
-      modCapHausse,
-      modCapBaisse,
-      modTransformation,
-      modProrogation,
-      modEtablissement,
+      modCapHausse, modCapBaisse, modTransformation, modProrogation, modEtablissement,
     ],
     dissolutions: [dissoAmiable, dissoSansLiquid],
   },
@@ -167,15 +126,10 @@ export const formesJuridiques: FormeJuridique[] = [
     slug: "SCI",
     intro: "Modifiez ou dissolvez votre SCI en toute sérénité. Nos formalistes prennent en charge l'ensemble des démarches auprès du guichet unique.",
     modifications: [
-      modSiege,
-      modNom,
-      modObjet,
+      modSiege, modNom, modObjet,
       { icon: "manage_accounts", title: "Changement de gérant", description: "Nommez ou révoquez le gérant de votre SCI", price: "Dès 89 €" },
       { icon: "swap_horiz", title: "Cession de parts sociales", description: "Transférez des parts entre associés ou vers un tiers", price: "Dès 149 €" },
-      modCapHausse,
-      modCapBaisse,
-      modProrogation,
-      modEtablissement,
+      modCapHausse, modCapBaisse, modProrogation, modEtablissement,
     ],
     dissolutions: [dissoAmiable, dissoSansLiquid],
   },
@@ -186,15 +140,10 @@ export const formesJuridiques: FormeJuridique[] = [
     slug: "SA",
     intro: "Modifiez ou dissolvez votre SA en toute sérénité. Nos formalistes prennent en charge l'ensemble des démarches auprès du guichet unique.",
     modifications: [
-      modSiege,
-      modNom,
-      modObjet,
+      modSiege, modNom, modObjet,
       { icon: "manage_accounts", title: "Changement de directeur général", description: "Nommez ou révoquez le directeur général ou des administrateurs", price: "Dès 89 €" },
       { icon: "swap_horiz", title: "Cession d'actions", description: "Transférez des actions entre actionnaires ou vers un tiers", price: "Dès 149 €" },
-      modCapHausse,
-      modCapBaisse,
-      modTransformation,
-      modProrogation,
+      modCapHausse, modCapBaisse, modTransformation, modProrogation,
     ],
     dissolutions: [dissoAmiable, dissoSansLiquid],
   },
@@ -205,13 +154,10 @@ export const formesJuridiques: FormeJuridique[] = [
     slug: "SNC",
     intro: "Modifiez ou dissolvez votre SNC en toute sérénité. Nos formalistes prennent en charge l'ensemble des démarches auprès du guichet unique.",
     modifications: [
-      modSiege,
-      modNom,
-      modObjet,
+      modSiege, modNom, modObjet,
       { icon: "manage_accounts", title: "Changement de gérant", description: "Nommez ou révoquez le gérant de votre SNC", price: "Dès 89 €" },
       { icon: "swap_horiz", title: "Cession de parts sociales", description: "Transférez des parts entre associés", price: "Dès 149 €" },
-      modProrogation,
-      modEtablissement,
+      modProrogation, modEtablissement,
     ],
     dissolutions: [dissoAmiable, dissoSansLiquid],
   },

@@ -1,17 +1,9 @@
-"use client";
-
 import { useState } from "react";
 
-type SelectionFormProps = {
-  title: string;
-  options: string[];
-  cta: string;
-};
+export default function SelectionForm({ title, options, cta }) {
+  const [selected, setSelected] = useState(new Set());
 
-export default function SelectionForm({ title, options, cta }: SelectionFormProps) {
-  const [selected, setSelected] = useState<Set<string>>(new Set());
-
-  const toggle = (opt: string) => {
+  const toggle = (opt) => {
     setSelected((prev) => {
       const next = new Set(prev);
       if (next.has(opt)) next.delete(opt);
@@ -29,7 +21,6 @@ export default function SelectionForm({ title, options, cta }: SelectionFormProp
         {title}
       </h2>
 
-      {/* Grille 2 colonnes — multi-select */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-7">
         {options.map((opt) => {
           const isOn = selected.has(opt);
@@ -45,7 +36,6 @@ export default function SelectionForm({ title, options, cta }: SelectionFormProp
                   : "border-[#E9E9E9] bg-white hover:border-[#C5D8FF] hover:bg-[#F2F9FD]",
               ].join(" ")}
             >
-              {/* Case à cocher */}
               <div
                 className={[
                   "w-5 h-5 rounded border-2 flex items-center justify-center shrink-0 transition-all duration-150",
@@ -53,10 +43,7 @@ export default function SelectionForm({ title, options, cta }: SelectionFormProp
                 ].join(" ")}
               >
                 {isOn && (
-                  <span
-                    className="material-symbols-outlined text-white"
-                    style={{ fontSize: "13px" }}
-                  >
+                  <span className="material-symbols-outlined text-white" style={{ fontSize: "13px" }}>
                     check
                   </span>
                 )}
@@ -74,7 +61,6 @@ export default function SelectionForm({ title, options, cta }: SelectionFormProp
         })}
       </div>
 
-      {/* CTA */}
       <button
         type="button"
         disabled={selected.size === 0}

@@ -4,12 +4,42 @@ import LegalFormCard from "@/components/LegalFormCard";
 import ProcessStepper from "@/components/ProcessStepper";
 import { formesJuridiques } from "@/lib/formes-juridiques";
 
-const FORMES_CREATION = ["SAS", "SASU", "SARL", "EURL", "SCI"];
+// SAS/SARL/SASU/EURL → étape situation (moi / mandataire)
+const FORMES_AVEC_SITUATION = ["SAS", "SARL", "SASU", "EURL"];
+
+// SCI, EI, Micro → sortie directe externe (pas de mandataire)
+const FORMES_DIRECTES = [
+  {
+    acronym: "SCI",
+    fullName: "Société Civile Immobilière",
+    description: "La structure idéale pour gérer et transmettre un patrimoine immobilier",
+    href: "https://societe-com.legalplace.fr/contrats/s-com-creation-societe-civile/creer",
+  },
+  {
+    acronym: "EI",
+    fullName: "Entrepreneur Individuel",
+    description: "Le statut simple et flexible pour exercer en nom propre",
+    href: "https://societe-com.legalplace.fr/contrats/s-com-creation-micro-entreprise/creer",
+  },
+  {
+    acronym: "Micro",
+    fullName: "Micro-entreprise",
+    description: "Le régime simplifié pour démarrer rapidement votre activité",
+    href: "https://societe-com.legalplace.fr/contrats/s-com-creation-micro-entreprise/creer",
+  },
+];
 
 export default function CreerMonEntreprisePage() {
-  const formes = formesJuridiques.filter((f) =>
-    FORMES_CREATION.includes(f.acronym)
-  );
+  const formesAvecSituation = formesJuridiques
+    .filter((f) => FORMES_AVEC_SITUATION.includes(f.acronym))
+    .map((f) => ({
+      acronym: f.acronym,
+      fullName: f.fullName,
+      description: f.description,
+      href: `/creer-mon-entreprise/${f.slug}`,
+    }));
+
+  const allForms = [...formesAvecSituation, ...FORMES_DIRECTES];
 
   return (
     <>
@@ -33,13 +63,13 @@ export default function CreerMonEntreprisePage() {
           </p>
 
           <div className="px-4 sm:px-8 lg:px-[120px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {formes.map((f) => (
+            {allForms.map((f) => (
               <LegalFormCard
-                key={f.slug}
+                key={f.acronym}
                 acronym={f.acronym}
                 fullName={f.fullName}
                 description={f.description}
-                href={`/creer-mon-entreprise/${f.slug}`}
+                href={f.href}
               />
             ))}
           </div>

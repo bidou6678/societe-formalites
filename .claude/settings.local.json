@@ -9,7 +9,11 @@
       "WebFetch(domain:services.pappers.fr)",
       "WebSearch",
       "Bash(identify /Users/societe/societe-formalites/public/logos/logo-societe.png)",
-      "WebFetch(domain:www.societe.com)"
+      "WebFetch(domain:www.societe.com)",
+      "Bash(npm install *)",
+      "Bash(sudo chown *)",
+      "Bash(git add *)",
+      "Bash(git rm *)"
     ]
   }
 }

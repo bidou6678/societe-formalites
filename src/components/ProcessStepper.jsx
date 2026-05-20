@@ -1,26 +1,20 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const STEPS = [
   "Choix de la forme juridique",
   "Votre situation",
-  "Offres",
-  "Modification ou dissolution de l'entreprise",
+  // "Offres",
+  // "Modification ou dissolution de l'entreprise",
 ];
 
-type ProcessStepperProps = {
-  currentStep: number;
-  forme?: string;
-  situation?: string;
-};
-
-function stepHref(stepNum: number, forme?: string, situation?: string): string | null {
+function stepHref(stepNum, forme, situation) {
   if (stepNum === 1) return "/modifier-mon-entreprise";
   if (stepNum === 2 && forme) return `/modifier-mon-entreprise/${forme}`;
   if (stepNum === 3 && forme && situation) return `/modifier-mon-entreprise/${forme}/${situation}`;
   return null;
 }
 
-export default function ProcessStepper({ currentStep, forme, situation }: ProcessStepperProps) {
+export default function ProcessStepper({ currentStep, forme, situation }) {
   return (
     <div className="bg-white border-b border-[#E9E9E9] px-4 sm:px-8 lg:px-[120px] py-5">
       <div className="flex items-center gap-2 flex-wrap">
@@ -38,10 +32,7 @@ export default function ProcessStepper({ currentStep, forme, situation }: Proces
                   {num}. {step}
                 </span>
               ) : isDone && href ? (
-                <Link
-                  href={href}
-                  className="text-[#005EFF] font-medium text-sm hover:underline"
-                >
+                <Link to={href} className="text-[#005EFF] font-medium text-sm hover:underline">
                   {num}. {step}
                 </Link>
               ) : (

@@ -1,19 +1,19 @@
-"use client";
-
-import Link from "next/link";
-
 export default function Header() {
   return (
-    <header className="bg-white h-[76px] flex items-center shrink-0 w-full relative z-10" style={{ boxShadow: "0 2px 4px rgba(0,0,0,.12)" }}>
+    <header
+      className="bg-white h-[76px] flex items-center shrink-0 w-full relative z-10"
+      style={{ boxShadow: "0 2px 4px rgba(0,0,0,.12)" }}
+    >
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center gap-4 lg:gap-8 h-full">
 
-        {/* Logo */}
         <a href="https://www.societe.com/" className="shrink-0 flex items-center">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logos/logo-color.svg" alt="Société.com" style={{ height: "38px", width: "111px" }} />
+          <img
+            src="/logos/logo-color.svg"
+            alt="Société.com"
+            style={{ height: "38px", width: "111px" }}
+          />
         </a>
 
-        {/* Navigation — masquée sur mobile */}
         <nav className="hidden lg:flex items-center shrink-0 h-full">
           {[
             { label: "Solutions", href: "https://www.societe.com/solutions" },
@@ -30,16 +30,9 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Barre de recherche — masquée sur mobile */}
-        <a
-          href="https://www.societe.com/cgi-bin/search"
-          className="hidden md:block flex-1 min-w-0"
-        >
+        <a href="https://www.societe.com/cgi-bin/search" className="hidden md:block flex-1 min-w-0">
           <div className="flex items-center gap-3 bg-white border border-[#BABFD6] rounded-[20px] px-4 py-[11px] hover:border-[#005EFF] transition-colors cursor-pointer">
-            <span
-              className="material-symbols-outlined text-[#45518C] shrink-0"
-              style={{ fontSize: "24px" }}
-            >
+            <span className="material-symbols-outlined text-[#45518C] shrink-0" style={{ fontSize: "24px" }}>
               search
             </span>
             <span className="flex-1 text-base text-[#45518C] font-normal select-none">
@@ -48,16 +41,12 @@ export default function Header() {
           </div>
         </a>
 
-        {/* Bouton espace compte */}
         <a
           href="https://paiement.societe.com/cgi-bin/compte-synthese"
           aria-label="Mon espace"
           className="shrink-0 ml-auto md:ml-0 w-11 h-11 rounded-full border border-[#BABFD6] flex items-center justify-center hover:bg-[#F2F9FD] transition-colors"
         >
-          <span
-            className="material-symbols-outlined text-[#000E47]"
-            style={{ fontSize: "24px" }}
-          >
+          <span className="material-symbols-outlined text-[#000E47]" style={{ fontSize: "24px" }}>
             account_circle
           </span>
         </a>

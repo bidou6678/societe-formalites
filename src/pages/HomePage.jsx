@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
-import FeatureCard from "@/components/FeatureCard";
 import Footer from "@/components/Footer";
+import FeatureCard from "@/components/FeatureCard";
 
 const features = [
   {
@@ -60,7 +60,6 @@ export default function HomePage() {
 
       <main className="flex-1 bg-[#F2F9FD]">
         <section className="py-10 lg:py-[80px]">
-          {/* Titre */}
           <h1
             className="text-[#000E47] font-bold text-center w-full mb-8 lg:mb-[60px] px-4"
             style={{ fontSize: "32px", lineHeight: "40px" }}
@@ -68,7 +67,6 @@ export default function HomePage() {
             Société.com vous accompagne dans l&apos;ensemble de vos besoins
           </h1>
 
-          {/* Grille responsive */}
           <div className="px-4 sm:px-8 lg:px-[120px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f) => (
               <FeatureCard key={f.href} {...f} />
