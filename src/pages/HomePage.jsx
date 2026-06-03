@@ -43,13 +43,13 @@ const features = [
     icon: "account_balance",
     title: "Ouvrir un compte bancaire",
     description: "Le compte bancaire pro qui te lance",
-    href: "https://www.bunq.com/fr-fr/business-account?transaction_id=150fe28c0d824f53824bca71ef520449&utm_source=gp8fuyk&utm_campaign=41&utm_medium=1773",
+    href: "https://www.revolut.com/fr-FR/business/open-enterprise-business-account/?pid=Googlepaid&af_c_id=21705291826&af_adset_id=171028470881&af_ad=745062439090&utm_term=revolut+compte+pro&af_siteid=&utm_match=p&utm_network=g&utm_source=Googlepaid&c=Rev_BIZ_GSearch_2024_FR_FR_BRAND&utm_campaign=Rev_BIZ_GSearch_2024_FR_FR_BRAND&promo=B2B_SEARCH_BIZ_FR_B&af_sub5=FR",
   },
   {
     icon: "public",
     title: "Réaliser mon Bilan Carbone®",
     description: "Le Bilan Carbone efficace et conforme",
-    href: "/bilan-carbone",
+    href: "https://www.societe.com/solutions/bilan-carbone",
   },
 ];
 

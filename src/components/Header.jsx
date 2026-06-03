@@ -16,8 +16,8 @@ export default function Header() {
 
         <nav className="hidden lg:flex items-center shrink-0 h-full">
           {[
-            { label: "Solutions", href: "https://www.societe.com/solutions" },
-            { label: "Services", href: "/" },
+            { label: "Solutions", href: "https://www.societe.com/" },
+            { label: "Formalités", href: "/" },
             { label: "Offres", href: "https://www.societe.com/offres.html" },
           ].map((item) => (
             <a

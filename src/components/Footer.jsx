@@ -3,29 +3,32 @@ const footerLinks = [
     title: "Offres et services",
     links: [
       { label: "Offres", href: "https://www.societe.com/offres.html" },
-      { label: "Fichiers", href: "https://www.societe.com/fichiers" },
-      { label: "Annuaire", href: "https://www.societe.com/annuaire" },
-      { label: "API", href: "https://www.societe.com/api" },
+      { label: "Fichiers", href: "https://fichier.societe.com/pages/fichier-entreprises.html" },
+      { label: "Annuaire", href: "https://www.societe.com/entreprises" },
+      { label: "API", href: "https://www.societe.com/solutions/api" },
     ],
   },
   {
     title: "Aide et contact",
     links: [
-      { label: "Contact Societe.com", href: "https://www.societe.com/contact" },
-      { label: "FAQ", href: "https://www.societe.com/faq" },
+      { label: "Contact Societe.com", href: "https://www.societe.com/pages/contact.html" },
+      { label: "Glossaire", href: "https://www.societe.com/glossaire/index.html" },
     ],
   },
   {
     title: "Actualité",
-    links: [{ label: "Blog Societe", href: "https://www.societe.com/blog" }],
+    links: [
+      { label: "Blog Societe", href: "https://blog.societe.com/" },
+      { label: "À propos", href: "https://www.societe.com/pages/a-propos.html" },
+    ],
   },
 ];
 
 const legalLinks = [
-  { label: "CGU & CGV", href: "https://www.societe.com/cgu" },
+  { label: "CGU & CGV", href: "https://www.societe.com/pages/cgu-cgv.html" },
   { label: "Gestion des cookies", href: "https://www.societe.com/cookies" },
-  { label: "Politique de confidentialité", href: "https://www.societe.com/confidentialite" },
-  { label: "Mentions Légales", href: "https://www.societe.com/mentions-legales" },
+  { label: "Politique de confidentialité", href: "https://www.societe.com/pages/politique-de-protection-des-donnees-personnelles.html" },
+  { label: "Mentions Légales", href: "https://www.societe.com/pages/mentions-legales.html" },
 ];
 
 export default function Footer() {
