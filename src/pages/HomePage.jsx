@@ -31,7 +31,7 @@ const features = [
     icon: "payments",
     title: "Gérer ma comptabilité",
     description: "Votre comptabilité 100% en ligne",
-    href: "https://get.l-expert-comptable.com/lp-partenaire-societecom?utm_source=other&utm_medium=partenariats&utm_campaign=societe.com&detail_partenariat=001bS00000P2KfPQAV&utm_content=homepage",
+    href: "https://www.comptaplace.fr?utm_source=partner&utm_campaign=societe",
   },
   {
     icon: "currency_exchange",
@@ -43,7 +43,7 @@ const features = [
     icon: "account_balance",
     title: "Ouvrir un compte bancaire",
     description: "Le compte bancaire pro qui te lance",
-    href: "https://www.revolut.com/fr-FR/business/open-enterprise-business-account/?pid=Googlepaid&af_c_id=21705291826&af_adset_id=171028470881&af_ad=745062439090&utm_term=revolut+compte+pro&af_siteid=&utm_match=p&utm_network=g&utm_source=Googlepaid&c=Rev_BIZ_GSearch_2024_FR_FR_BRAND&utm_campaign=Rev_BIZ_GSearch_2024_FR_FR_BRAND&promo=B2B_SEARCH_BIZ_FR_B&af_sub5=FR",
+    href: "https://revolutbusiness.ngih.net/c/7333184/3925468/9943",
   },
   {
     icon: "public",
