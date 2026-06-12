@@ -42,7 +42,7 @@ const features = [
   {
     icon: "account_balance",
     title: "Ouvrir un compte bancaire",
-    description: "Le compte bancaire pro qui te lance",
+    description: "Réduisez les frais bancaires pour votre entreprise",
     href: "https://revolutbusiness.ngih.net/c/7333184/3925468/9943",
   },
   {
