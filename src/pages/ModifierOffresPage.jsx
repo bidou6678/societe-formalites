@@ -12,12 +12,12 @@ const SITUATION_LABELS = {
 // URLs de sortie selon l'offre et la situation
 const OFFRE_URLS = {
   modifications: {
-    moi: "https://societe-com.legalplace.fr/contrats/s-com-modifications/creer",
-    client: "https://societe-com.legalplace.fr/contrats/s-com-mand-modifications/creer",
+    moi: "https://scom.legalplace.fr/contrats/s-com-modifications/creer",
+    client: "https://scom.legalplace.fr/contrats/s-com-mand-modifications/creer",
   },
   dissolution: {
-    moi: "https://societe-com.legalplace.fr/contrats/s-com-dissolution/creer/",
-    client: "https://societe-com.legalplace.fr/contrats/s-com-mand-dissolution/creer",
+    moi: "https://scom.legalplace.fr/contrats/s-com-dissolution/creer/",
+    client: "https://scom.legalplace.fr/contrats/s-com-mand-dissolution/creer",
   },
 };
 

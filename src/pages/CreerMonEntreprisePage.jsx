@@ -13,19 +13,19 @@ const FORMES_DIRECTES = [
     acronym: "SCI",
     fullName: "Société Civile Immobilière",
     description: "La structure idéale pour gérer et transmettre un patrimoine immobilier",
-    href: "https://societe-com.legalplace.fr/contrats/s-com-creation-societe-civile/creer",
+    href: "https://scom.legalplace.fr/contrats/s-com-creation-societe-civile/creer",
   },
   {
     acronym: "EI",
     fullName: "Entrepreneur Individuel",
     description: "Le statut simple et flexible pour exercer en nom propre",
-    href: "https://societe-com.legalplace.fr/contrats/s-com-creation-micro-entreprise/creer",
+    href: "https://scom.legalplace.fr/contrats/s-com-creation-micro-entreprise/creer",
   },
   {
     acronym: "Micro",
     fullName: "Micro-entreprise",
     description: "Le régime simplifié pour démarrer rapidement votre activité",
-    href: "https://societe-com.legalplace.fr/contrats/s-com-creation-micro-entreprise/creer",
+    href: "https://scom.legalplace.fr/contrats/s-com-creation-micro-entreprise/creer",
   },
 ];
 
