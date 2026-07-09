@@ -14,7 +14,7 @@ const situations = [
     title: "Pour moi même",
     description: "Vous êtes le futur dirigeant et souhaitez créer votre propre entreprise.",
     tag: "Particulier",
-    href: "https://societe-com.legalplace.fr/contrats/s-com-creation-societe/creer",
+    href: "https://scom.legalplace.fr/contrats/s-com-creation-societe/creer",
   },
   {
     slug: "client",
@@ -23,7 +23,7 @@ const situations = [
     description:
       "Vous êtes expert-comptable, avocat ou mandataire et réalisez cette démarche pour le compte d'un client.",
     tag: "Professionnel",
-    href: "https://societe-com.legalplace.fr/contrats/s-com-mand-creation-societe/creer",
+    href: "https://scom.legalplace.fr/contrats/s-com-mand-creation-societe/creer",
   },
 ];
 
