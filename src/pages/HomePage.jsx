@@ -4,13 +4,13 @@ import FeatureCard from "@/components/FeatureCard";
 
 const features = [
   {
-    icon: "rocket_launch",
+    logo: { src: "/partners/legalplace.png", alt: "LegalPlace" },
     title: "Créer mon entreprise",
     description: "La création d'entreprise simple et rapide",
     href: "/creer-mon-entreprise",
   },
   {
-    icon: "change_circle",
+    logo: { src: "/partners/legalplace.png", alt: "LegalPlace" },
     title: "Modifier mon entreprise",
     description: "Modifier son entreprise simplement",
     href: "/modifier-mon-entreprise",
@@ -22,13 +22,13 @@ const features = [
     href: "https://www.societe.com/services/annonces-legales",
   },
   {
-    icon: "receipt_long",
+    logo: { src: "/partners/pennylane-logo.png", alt: "Pennylane", crop: true },
     title: "Gérer ma facture électronique",
     description: "Gérer ma facture électronique (PDP)",
     href: "https://www.pennylane.com/fr/facture-electronique-societe?utm_source=societe&utm_medium=paid&ae=381",
   },
   {
-    icon: "payments",
+    logo: { src: "/partners/comptaplace.svg", alt: "Compta by LP" },
     title: "Gérer ma comptabilité",
     description: "Votre comptabilité 100% en ligne",
     href: "https://www.comptaplace.fr?utm_source=partner&utm_campaign=societe",
@@ -40,7 +40,7 @@ const features = [
     href: "https://www.impayes.com/lp-partenaire-societecom.html",
   },
   {
-    icon: "account_balance",
+    logo: { src: "/partners/revolut.png", alt: "Revolut", crop: true },
     title: "Ouvrir un compte bancaire",
     description: "Réduisez les frais bancaires pour votre entreprise",
     href: "https://revolutbusiness.ngih.net/c/7333184/3925468/9943",

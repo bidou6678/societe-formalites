@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function FeatureCard({ icon, title, description, href }) {
+export default function FeatureCard({ icon, logo, title, description, href }) {
   const isExternal = href.startsWith("http");
 
   const className = [
@@ -14,11 +14,23 @@ export default function FeatureCard({ icon, title, description, href }) {
 
   const content = (
     <>
-      <div className="w-11 h-11 bg-[#E1F3FF] rounded-lg flex items-center justify-center shrink-0">
-        <span className="material-symbols-outlined text-[#005EFF]" style={{ fontSize: "32px" }}>
-          {icon}
-        </span>
-      </div>
+      {logo ? (
+        <div className="h-11 flex items-center shrink-0">
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            className={logo.crop
+              ? "w-40 h-11 object-cover object-center mix-blend-multiply"
+              : "w-40 h-11 object-contain object-left mix-blend-multiply"}
+          />
+        </div>
+      ) : (
+        <div className="w-11 h-11 bg-[#E1F3FF] rounded-lg flex items-center justify-center shrink-0">
+          <span className="material-symbols-outlined text-[#005EFF]" style={{ fontSize: "32px" }}>
+            {icon}
+          </span>
+        </div>
+      )}
       <div className="relative flex flex-col gap-2 flex-1">
         <p className="text-[#1E2F73] text-xl font-bold leading-6 pr-12">{title}</p>
         <p className="text-[#000E47] text-base font-normal leading-6 pr-12">{description}</p>
