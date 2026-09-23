@@ -19,7 +19,8 @@ export default function FeatureCard({ icon, logo, title, description, href }) {
           <img
             src={logo.src}
             alt={logo.alt}
-            className="w-[150px] h-auto max-h-[52px] object-contain object-left mix-blend-multiply"
+            className="h-auto max-h-[52px] object-contain object-left mix-blend-multiply"
+            style={{ width: `${logo.width ?? 150}px` }}
           />
         </div>
       ) : (

@@ -16,7 +16,7 @@ const features = [
     href: "/modifier-mon-entreprise",
   },
   {
-    logo: { src: "/partners/societe-annonces-legales.png", alt: "Société.com Annonces légales" },
+    logo: { src: "/partners/societe-annonces-legales.png", alt: "Société.com Annonces légales", width: 110 },
     title: "Publier une annonce légale",
     description: "Votre annonce publiée en 1 minute",
     href: "https://www.societe.com/services/annonces-legales",
@@ -28,25 +28,25 @@ const features = [
     href: "https://www.pennylane.com/fr/facture-electronique-societe?utm_source=societe&utm_medium=paid&ae=381",
   },
   {
-    logo: { src: "/partners/comptaplace.svg", alt: "ComptaPlace" },
+    logo: { src: "/partners/comptaplace.svg", alt: "ComptaPlace", width: 170 },
     title: "Gérer ma comptabilité",
     description: "Votre comptabilité 100% en ligne",
     href: "https://www.comptaplace.fr?utm_source=partner&utm_campaign=societe",
   },
   {
-    logo: { src: "/partners/societe-recouvrement.png", alt: "Société.com Recouvrement" },
+    logo: { src: "/partners/societe-recouvrement.png", alt: "Société.com Recouvrement", width: 110 },
     title: "Récupérer mes impayés",
     description: "Recouvrement de créances simplifié",
     href: "https://www.impayes.com/lp-partenaire-societecom.html",
   },
   {
-    logo: { src: "/partners/revolut.png", alt: "Revolut" },
+    logo: { src: "/partners/revolut.png", alt: "Revolut", width: 130 },
     title: "Ouvrir un compte bancaire",
     description: "Réduisez les frais bancaires pour votre entreprise",
     href: "https://revolutbusiness.ngih.net/c/7333184/3925468/9943",
   },
   {
-    logo: { src: "/partners/societe-bilan-carbone.png", alt: "Société.com Bilan Carbone" },
+    logo: { src: "/partners/societe-bilan-carbone.png", alt: "Société.com Bilan Carbone", width: 110 },
     title: "Réaliser mon Bilan Carbone®",
     description: "Le Bilan Carbone efficace et conforme",
     href: "https://www.societe.com/solutions/bilan-carbone",
