@@ -40,7 +40,7 @@ const features = [
     href: "https://www.impayes.com/lp-partenaire-societecom.html",
   },
   {
-    logo: { src: "/partners/revolut.png", alt: "Revolut", width: 120 },
+    logo: { src: "/partners/revolut.png", alt: "Revolut", width: 110 },
     title: "Ouvrir un compte bancaire",
     description: "Réduisez les frais bancaires pour votre entreprise",
     href: "https://revolutbusiness.ngih.net/c/7333184/3925468/9943",
