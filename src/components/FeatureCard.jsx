@@ -15,13 +15,11 @@ export default function FeatureCard({ icon, logo, title, description, href }) {
   const content = (
     <>
       {logo ? (
-        <div className="h-11 flex items-center shrink-0">
+        <div className="h-[52px] flex items-center shrink-0">
           <img
             src={logo.src}
             alt={logo.alt}
-            className={logo.crop
-              ? "w-40 h-11 object-cover object-center mix-blend-multiply"
-              : "w-40 h-11 object-contain object-left mix-blend-multiply"}
+            className="w-[150px] h-auto max-h-[52px] object-contain object-left mix-blend-multiply"
           />
         </div>
       ) : (

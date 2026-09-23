@@ -22,13 +22,13 @@ const features = [
     href: "https://www.societe.com/services/annonces-legales",
   },
   {
-    logo: { src: "/partners/pennylane-logo.png", alt: "Pennylane", crop: true },
+    logo: { src: "/partners/pennylane-logo.png", alt: "Pennylane" },
     title: "Gérer ma facture électronique",
     description: "Gérer ma facture électronique (PDP)",
     href: "https://www.pennylane.com/fr/facture-electronique-societe?utm_source=societe&utm_medium=paid&ae=381",
   },
   {
-    logo: { src: "/partners/comptaplace.svg", alt: "Compta by LP" },
+    logo: { src: "/partners/comptaplace.svg", alt: "ComptaPlace" },
     title: "Gérer ma comptabilité",
     description: "Votre comptabilité 100% en ligne",
     href: "https://www.comptaplace.fr?utm_source=partner&utm_campaign=societe",
@@ -40,7 +40,7 @@ const features = [
     href: "https://www.impayes.com/lp-partenaire-societecom.html",
   },
   {
-    logo: { src: "/partners/revolut.png", alt: "Revolut", crop: true },
+    logo: { src: "/partners/revolut.png", alt: "Revolut" },
     title: "Ouvrir un compte bancaire",
     description: "Réduisez les frais bancaires pour votre entreprise",
     href: "https://revolutbusiness.ngih.net/c/7333184/3925468/9943",
