@@ -28,7 +28,7 @@ const features = [
     href: "https://www.pennylane.com/fr/facture-electronique-societe?utm_source=societe&utm_medium=paid&ae=381",
   },
   {
-    logo: { src: "/partners/comptaplace.svg", alt: "ComptaPlace", width: 170 },
+    logo: { src: "/partners/comptaplace.svg", alt: "ComptaPlace", width: 180 },
     title: "Gérer ma comptabilité",
     description: "Votre comptabilité 100% en ligne",
     href: "https://www.comptaplace.fr?utm_source=partner&utm_campaign=societe",
